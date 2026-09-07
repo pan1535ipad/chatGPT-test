@@ -23,6 +23,7 @@
       <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
         <a href="#about">私たちについて</a>
         <a href="#services">サービス</a>
+        <a href="#process">ご相談の流れ</a>
         <a href="#company">会社概要</a>
         <a class="nav-contact" href="#contact">お問い合わせ</a>
       </nav>
@@ -64,17 +65,17 @@
           <p>状況に合わせて、必要な支援を柔軟に組み立てます。</p>
         </div>
         <div class="service-grid">
-          <article class="service-card">
+          <article class="service-card reveal">
             <span class="service-index">01</span>
             <h3>課題整理・現状分析</h3>
             <p>ヒアリングを通じて現状を可視化し、優先して取り組むべき課題を明確にします。</p>
           </article>
-          <article class="service-card">
+          <article class="service-card reveal">
             <span class="service-index">02</span>
             <h3>戦略・計画策定</h3>
             <p>目標達成までの道筋を整理し、実行可能な計画へ落とし込みます。</p>
           </article>
-          <article class="service-card">
+          <article class="service-card reveal">
             <span class="service-index">03</span>
             <h3>実行・改善サポート</h3>
             <p>計画の実行を継続的に支援し、状況に応じた見直しや改善をご提案します。</p>
@@ -83,10 +84,53 @@
       </div>
     </section>
 
+
+    <section class="impact section" aria-label="T&TGroupの特徴">
+      <div class="section-inner impact-grid reveal">
+        <div class="impact-copy">
+          <p class="eyebrow dark">OUR APPROACH</p>
+          <h2>相談から実行まで、<br>一つのチームとして。</h2>
+        </div>
+        <div class="stat"><strong data-count="3">0</strong><span>つの支援領域</span></div>
+        <div class="stat"><strong data-count="2019">0</strong><span>年 設立</span></div>
+        <div class="stat"><strong data-count="100" data-suffix="%">0</strong><span>伴走型サポート</span></div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <div><p class="section-number">03</p><p class="eyebrow dark">PROCESS</p></div>
+          <h2>ご相談の流れ</h2>
+          <p>はじめてのご相談でも、分かりやすく進めます。</p>
+        </div>
+        <ol class="process-list">
+          <li class="reveal"><span>01</span><div><h3>お問い合わせ</h3><p>現在の状況やご相談内容をお知らせください。</p></div></li>
+          <li class="reveal"><span>02</span><div><h3>ヒアリング</h3><p>目標・課題・背景を丁寧に整理します。</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>ご提案</h3><p>必要な支援内容と進め方をご提案します。</p></div></li>
+          <li class="reveal"><span>04</span><div><h3>実行・改善</h3><p>実行に伴走し、継続的に改善します。</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="section-inner two-column">
+        <div class="reveal">
+          <p class="section-number">04</p><p class="eyebrow dark">FAQ</p>
+          <h2>よくあるご質問</h2>
+        </div>
+        <div class="accordion reveal">
+          <details><summary>相談内容がまだ整理できていなくても大丈夫ですか？</summary><p>はい。ヒアリングを通じて、現状や課題を一緒に整理するところから対応します。</p></details>
+          <details><summary>対応エリアを教えてください。</summary><p>関西一円を対応エリアとしています。詳しい対応可否は個別にご相談ください。</p></details>
+          <details><summary>どのような規模の事業者が対象ですか？</summary><p>事業規模を問わず、それぞれの状況に合わせた支援内容をご提案します。</p></details>
+          <details><summary>相談から開始まで、どのように進みますか？</summary><p>お問い合わせ後にヒアリングを行い、課題に合った進め方をご案内します。</p></details>
+        </div>
+      </div>
+    </section>
     <section class="section company" id="company">
       <div class="section-inner two-column">
         <div>
-          <p class="section-number">03</p>
+          <p class="section-number">05</p>
           <p class="eyebrow dark">COMPANY</p>
           <h2>会社概要</h2>
         </div>
@@ -106,11 +150,13 @@
         <p class="eyebrow">CONTACT</p>
         <h2>まずは、お話を<br class="mobile-only">お聞かせください。</h2>
         <p>ご相談内容や現在のお悩みを伺い、状況に合わせてご案内いたします。</p>
-        <div class="contact-notice">
-          <span>お問い合わせ窓口</span>
-          <strong>準備中</strong>
-          <small>お問い合わせ方法は、準備が整い次第こちらに掲載いたします。</small>
-        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row"><label for="name">お名前</label><input id="name" name="name" type="text" autocomplete="name" required><small class="error"></small></div>
+          <div class="form-row"><label for="email">メールアドレス</label><input id="email" name="email" type="email" autocomplete="email" required><small class="error"></small></div>
+          <div class="form-row"><label for="message">ご相談内容</label><textarea id="message" name="message" rows="5" required></textarea><small class="error"></small></div>
+          <button class="form-submit" type="submit"><span>入力内容を確認する</span><b aria-hidden="true">→</b></button>
+          <p class="form-status" role="status"></p>
+        </form>
       </div>
     </section>
   </main>
